@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Starknet Chimpion</title>
+		<link rel="icon" type="image/png" href="./images/fav.png" />
+		<link rel="stylesheet" href="css/aos.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/measure.min.css" />
+		<link rel="stylesheet" href="css/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+
+		<script src="./js/jquery-3.6.0.min.js"></script>
+	</head>
+	<body>
+		<header id="header">
+			<div class="container">
+				<div class="content">
+					<a href="/" class="logo">
+						<h1 class="main-title">CHIMPION</h1>
+					</a>
+					<ul class="list-social">
+						<li>
+							<a target="_blank" href="https://twitter.com/starknet_chimp">
+								<img src="./images/twitter.svg" alt="" />
+								<img src="./images/twitter-active.svg" alt="" class="hover" />
+							</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://discord.gg/Abt7PkAkDg">
+								<img src="./images/discord.svg" alt="" />
+								<img src="./images/discord-active.svg" alt="" class="hover" />
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<section class="section-banner">
+			<div class="container">
+				<img class="main-img" src="./images/banner.gif" alt="" data-aos="zoom-in" />
+				<div class="banner-title">STARKNET NFTs</div>
+				<div class="text-center" data-aos="fade-up" data-aos-offset="100" data-aos-delay="100">
+					<a href="#buy-now" class="shape-btn open-popup">
+						<span>BUY NOW</span>
+					</a>
+				</div>
+			</div>
+		</section>
+		<section class="section-about">
+			<div class="container">
+				<div class="content">
+					<div class="left-content" data-aos="fade-up" data-aos-offset="100">
+						<h2 class="main-title color-white">WHAT IS<br />STARKNET CHIMPION?</h2>
+						<div>
+							The Starknet Chimpion is a collection of 2,554 algorithmically generated Chimp Champions from hundreds of various elements
+							<br />
+							Each Chimp has its own unique traits, personalities, all go through different stories later in life, but all of them are champions, at least in
+							someone's heart.
+							<br />
+							<br />
+							Collecting Chimpion is not simply buying an avatar or a rare piece of art, but we want to build Chimpion as an iconic image that has its own identity.
+							We’re building a Chimpverse for all chimp to interact & play with each other while earn money!
+						</div>
+					</div>
+					<div class="gallery" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50">
+						<div class="swiper gallery-slider">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="./images/img-11.jpg" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/img-05.jpg" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/img-06.jpg" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/img-07.jpg" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/img-08.jpg" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/img-09.jpg" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/img-10.jpg" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/img-01.jpg" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/img-02.jpg" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/img-03.jpg" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/img-12.jpg" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/img-04.jpg" />
+								</div>
+							</div>
+						</div>
+						<div thumbsSlider="" class="swiper gallery-thumb">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="./images/img-11.jpg" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/img-05.jpg" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/img-06.jpg" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/img-07.jpg" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/img-08.jpg" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/img-09.jpg" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/img-10.jpg" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/img-01.jpg" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/img-02.jpg" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/img-03.jpg" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/img-12.jpg" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/img-04.jpg" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section-journey section-journey-bg-1">
+			<div class="container">
+				<h2 class="main-title" data-aos="fade-left" data-aos-offset="100">JOURNEY TO CHIMPION - ROADMAP 2.0</h2>
+				<br />
+				<br />
+				<a href="./images/roadmap-2-big.jpg" data-fancybox>
+					<img class="w-100" src="./images/roadmap-2.jpg" />
+				</a>
+				<!--<div class="row">-->
+				<!--    <div class="col-md-4" data-aos="fade-up" data-aos-offset="100" data-aos-delay="150">-->
+				<!--        <img src="./images/20.png" alt="" class="w-100 d-none d-md-block" />-->
+				<!--        <img src="./images/20-mobile.png" alt="" class="w-100 d-block d-md-none" />-->
+				<!--        <br />-->
+				<!--        <br />-->
+				<!--        <ul>-->
+				<!--            <li>3x200 ADA Giveaways as Airdrops<br /><br /></li>-->
+				<!--            <li>10 Lucky Holders will get a free Chimp as airdrops<br /><br /></li>-->
+				<!--            <li>-->
+				<!--                AR filters and Virtual Exhibition AVAILABLE for our CHIMPIONS to have more experiences,-->
+				<!--                and more interesting interactions with the Chimps.-->
+				<!--            </li>-->
+				<!--        </ul>-->
+				<!--    </div>-->
+				<!--    <div class="col-md-4" data-aos="fade-up" data-aos-offset="100" data-aos-delay="200">-->
+				<!--        <img src="./images/50.png" alt="" class="w-100 d-none d-md-block" />-->
+				<!--        <img src="./images/50-mobile.png" alt="" class="w-100 d-block d-md-none" />-->
+				<!--        <br />-->
+				<!--        <br />-->
+				<!--        <ul>-->
+				<!--            <li>3x300 ADA Giveaways as Airdrops<br /><br /></li>-->
+				<!--            <li>-->
+				<!--                10 lucky holders will receive FREE merch with the author's signature (t-shirts,-->
+				<!--                prints).<br /><br />-->
+				<!--            </li>-->
+				<!--            <li>-->
+				<!--                Merch store will be opened, shipping worldwide. We have Chimpion Toys, T-shirts,-->
+				<!--                Prints... All Chimp Holders gets 50% price reduction on all products.-->
+				<!--            </li>-->
+				<!--        </ul>-->
+				<!--    </div>-->
+				<!--    <div class="col-md-4" data-aos="fade-up" data-aos-offset="100" data-aos-delay="250">-->
+				<!--        <img src="./images/100.png" alt="" class="w-100" />-->
+				<!--        <br />-->
+				<!--        <br />-->
+				<!--        <ul>-->
+				<!--            <li>3x500 ADA Giveaways as Airdrops<br /><br /></li>-->
+				<!--            <li>-->
+				<!--                Collecting feedbacks from members to start building Chimp Characters in the Metaverse-->
+				<!--                with utilities - teasing the DEMO of the P2E game featuring our Chimps (More to be-->
+				<!--                announced in Roadmap 2.0)<br /><br />-->
+				<!--            </li>-->
+				<!--            <li>Donate an amount of sale for the animal shelters as donation.</li>-->
+				<!--        </ul>-->
+				<!--    </div>-->
+				<!--</div>-->
+			</div>
+		</section>
+		<section class="section-club">
+			<div class="container">
+				<h2 class="main-title" data-aos="fade-left" data-aos-offset="100">CLUB’s manager</h2>
+				<div data-aos="fade-left" data-aos-offset="100" data-aos-delay="50">
+					The club is managed by a big team with big ambitions.
+					<br />
+					<br />
+					<br />
+				</div>
+				<div class="row">
+					<div class="col-6 col-lg-3" data-aos="fade-up" data-aos-offset="100" data-aos-delay="100">
+						<div class="image-box">
+							<img src="./images/team-1.png" alt="T Tao" />
+							<p class="mb-lg-5 mb-md-4 mb-3">
+								<br />
+								<strong>T. Tao</strong>
+								<br />
+								<span>Art Director, Lead Project</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-6 col-lg-3" data-aos="fade-up" data-aos-offset="100" data-aos-delay="150">
+						<div class="image-box">
+							<img src="./images/team-2.png" alt="Kevin" />
+							<p class="mb-lg-5 mb-md-4 mb-3">
+								<br />
+								<strong>Kevin</strong>
+								<br />
+								<span>Project Leader</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-6 col-lg-3" data-aos="fade-up" data-aos-offset="100" data-aos-delay="200">
+						<div class="image-box">
+							<img src="./images/team-3.png" alt="Mizuho" />
+							<p class="mb-lg-5 mb-md-4 mb-3">
+								<br />
+								<strong>Huy Nguyen</strong>
+								<br />
+								<span>Chimp Developer</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-6 col-lg-3" data-aos="fade-up" data-aos-offset="100" data-aos-delay="250">
+						<div class="image-box">
+							<img src="./images/team-4.png" alt="M. Nicky" />
+							<p class="mb-lg-5 mb-md-4 mb-3">
+								<br />
+								<strong>Tim</strong>
+								<br />
+								<span>Club Senior Mod</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-6 col-lg-3" data-aos="fade-up" data-aos-offset="100" data-aos-delay="250">
+						<div class="image-box">
+							<img src="./images/team-5.png" alt="M. Nicky" />
+							<p class="mb-lg-5 mb-md-4 mb-3">
+								<br />
+								<strong>Tiger</strong>
+								<br />
+								<span>Community Manager</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-6 col-lg-3" data-aos="fade-up" data-aos-offset="100" data-aos-delay="250">
+						<div class="image-box">
+							<img src="./images/team-6.png" alt="M. Nicky" />
+							<p class="mb-lg-5 mb-md-4 mb-3">
+								<br />
+								<strong>Nupakachi</strong>
+								<br />
+								<span>Community Assistant</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section-journey">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6" data-aos="fade-up" data-aos-offset="100" data-aos-delay="0">
+						<h2 class="main-title" data-aos="fade-left" data-aos-offset="100">PLAY-TO-EARN</h2>
+						<div>
+							<p>
+								Our P2E GAME DEMO, though the game is not officially up yet, we want to tease how it is going to be - this will be one of the concepts we are
+								working on & each chimp is a unique character ingame - prizes are $ADA & our own TOKEN being distributed every week for top players on leaderboard.
+								Also lending features are under construction & will be launched in Q3/22.
+							</p>
+							<p>
+								The game is only a part of our long term goals, our ROADMAP 2.0 will feature more directions STARKNET CHIMPION can move forward as we collect more
+								feedbacks & suggestions from you guys.
+							</p>
+						</div>
+					</div>
+					<div class="col-md-6" data-aos="fade-up" data-aos-offset="100" data-aos-delay="100">
+						<a href="./images/game-video.mp4" data-fancybox>
+							<img src="./images/game-video.jpg" alt="" class="w-100" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section-qa">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2">
+						<h2 class="main-title">FAQ</h2>
+					</div>
+					<div class="col-lg-10">
+						<div class="accordion" id="accordion-faq">
+							<div class="accordion-item">
+								<div class="title" data-bs-toggle="collapse" data-bs-target="#faq-1">Who are we?</div>
+								<div id="faq-1" class="collapse show" data-bs-parent="#accordion-faq">
+									<div class="content">
+										We are a team 6 members who work in different fields: Digital Arts, Developing & Coding, Senior Manager and even project management. We come
+										here together to bring ideas to existence.
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<div class="title" data-bs-toggle="collapse" data-bs-target="#faq-2">Our Vision?</div>
+								<div id="faq-2" class="collapse" data-bs-parent="#accordion-faq">
+									<div class="content">
+										We come here together to bring ideas to existence. Our team has been working for big name projects & we gathered to build something special
+										& unique - create our own Metaverse where everyone can interact & play games while making income.
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<div class="title" data-bs-toggle="collapse" data-bs-target="#faq-3">How to mint?</div>
+								<div id="faq-3" class="collapse" data-bs-parent="#accordion-faq">
+									<div class="content">
+										Send exactly the required amount showed on our website. Only send from wallets support the Cardano NFTs like Daedalus, CCVault, Yoroi and
+										Nami…<br />
+										Do not send from an exchange or your NFTs might get lost.
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<div class="title" data-bs-toggle="collapse" data-bs-target="#faq-4">What are the maximum NFTs per transaction?</div>
+								<div id="faq-4" class="collapse" data-bs-parent="#accordion-faq">
+									<div class="content">You can mint up to 10 Chimps per transaction.</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<div class="title" data-bs-toggle="collapse" data-bs-target="#faq-5">How can I participate in the P2E Game & Renting Features?</div>
+								<div id="faq-5" class="collapse" data-bs-parent="#accordion-faq">
+									<div class="content">
+										We are building the game behind the scene, our demo will go live soon while the BETA gameplay will be available in Q3/2022. Renting feature
+										will then be available with which you can earn $ADA for renting out your Chimp.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-top">
+					<div class="row justify-content-between align-items-center">
+						<div class="col-lg-6">
+							<h2 class="main-title">JOIN THE COMMUNITY</h2>
+							<div class="mb-3 mb-md-0">Join us to get the latest news and also the special offers for holders.</div>
+						</div>
+						<div class="col-lg-6 text-lg-end">
+							<a target="_blank" href="https://discord.gg/Abt7PkAkDg" class="shape-btn">
+								<span>JOIN OUR DISCORD</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<hr style="border-color: #000" class="my-2" />
+				<div class="footer-bottom">
+					<div class="row align-items-center">
+						<div class="col-lg-4">
+							<ul class="list-social justify-content-center justify-content-lg-start">
+								<li>
+									<a target="_blank" href="https://twitter.com/starknet_chimp">
+										<img src="./images/twitter.svg" alt="" />
+										<img src="./images/twitter-active.svg" alt="" class="hover" />
+									</a>
+								</li>
+								<li>
+									<a target="_blank" href="https://discord.gg/Abt7PkAkDg">
+										<img src="./images/discord.svg" alt="" />
+										<img src="./images/discord-active.svg" alt="" class="hover" />
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-lg-4 text-center">
+							<a href="/" class="d-inline-block my-2">
+								<img src="./images/logo-footer.png" alt="" />
+							</a>
+						</div>
+						<div class="col-lg-4 text-center text-lg-end">
+							<div class="copyright">
+								<strong>Policy ID:</strong><br />
+								...
+								<br />
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="footer-quote text-center mt-3">All Rights Reserved © 2022</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- <div class="popup">
+            <div class="overlay"></div>
+            <div class="box">
+                <div class="popup-close close-popup"></div>
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2 class="main-title">CHIMP HOUSE</h2>
+                        <div>Welcome to the Chimpverse - we're creating houses & buildings where our chimps hangout, play games & chill with each other...</div>
+                        <a href="/chimphouse" class="shape-btn mt-lg-5 mt-md-4 mt-sm-3 mt-2">
+                            <span>SEE MORE</span>
+                        </a>
+                        <br />
+                    </div>
+                    <div class="col-md-6">
+                        <img src="./images/chimp-house.jpg" class="w-100" />
+                    </div>
+                </div>
+            </div>
+        </div> -->
+		<div class="d-none">
+			<img src="./images/left-btn-active.svg" />
+			<img src="./images/right-btn-active.svg" />
+		</div>
+		<script src="./js/aos.js"></script>
+		<script src="./js/bootstrap.min.js"></script>
+		<script src="./js/swiper-bundle.min.js"></script>
+		<script src="./js/jquery.fancybox.min.js"></script>
+		<script>
+			jQuery(document).ready(function ($) {
+				$(".popup").addClass("open");
+			});
+		</script>
+		<script src="./js/script.js"></script>
+	</body>
+</html>

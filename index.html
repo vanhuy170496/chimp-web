@@ -35,6 +35,12 @@
 								<img src="./images/discord-active.svg" alt="" class="hover" />
 							</a>
 						</li>
+						<li>
+							<a href="#connect" class="shape-btn small" id="connect">
+								<span id="connect-value" class="value">CONNECT</span>
+								<span class="disconnect-value">DISCONNECT</span>
+							</a>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -182,7 +188,7 @@
 								<div class="title" data-bs-toggle="collapse" data-bs-target="#faq-1">Who are we?</div>
 								<div id="faq-1" class="collapse show" data-bs-parent="#accordion-faq">
 									<div class="content">
-										We are a team 6 members who work in different fields: Digital Arts, Developing & Coding, Senior Manager and even project management. We come
+										We are a team 4 members who work in different fields: Digital Arts, Developing & Coding, Senior Manager and even Project Management. We come
 										here together to bring ideas to existence.
 									</div>
 								</div>
@@ -191,8 +197,60 @@
 								<div class="title" data-bs-toggle="collapse" data-bs-target="#faq-2">Our Vision?</div>
 								<div id="faq-2" class="collapse" data-bs-parent="#accordion-faq">
 									<div class="content">
-										We come here together to bring ideas to existence. Our team has been working for big name projects & we gathered to build something special
-										& unique - create our own Metaverse where everyone can interact & play games while making income.
+										We come together to bring ideas to existence. Our team has been working for big name projects & we gathered to build something special &
+										unique - create our own Metaverse on Starknet where everyone can interact & play games while making income.
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<div class="title" data-bs-toggle="collapse" data-bs-target="#faq-3">How to mint?</div>
+								<div id="faq-3" class="collapse" data-bs-parent="#accordion-faq">
+									<div class="content">
+										Mint will take place on our website: https://starknet-chimp.xyz/ - We're launching on Starknet Mainnet
+										<br />
+										<br />
+										You’ll need to connect to your ArgentX Wallet - make sure to bridge funds from your Metamask (Ethereum Network) to ArgentX Wallet via
+										Starkgate (https://starkgate.starknet.io/).
+										<br />
+										<br />
+										You’ll be asked to sign a contract & choose the amount of NFTs you want to mint.
+										<br />
+										<br />
+										Do not send funds from an exchange or your NFTs might get lost.
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<div class="title" data-bs-toggle="collapse" data-bs-target="#faq-4">Will the mint be on Mintsquare?</div>
+								<div id="faq-4" class="collapse" data-bs-parent="#accordion-faq">
+									<div class="content">
+										Even though we wish it were, Mintsquare is full on their launchpad slots till December - so we have been writing our own smart contracts in
+										Cairo - which is still in early development & has lots of bugs
+										<br />
+										<br />
+										However, the good news is that Mintsquare is our official partner & will support us in various ways.
+										<br />
+										<br />
+										What are the maximum NFTs per transaction?
+										<br />
+										Whitelist & OG: maximum 2 per transaction
+										<br />
+										<br />
+										Public Sale: unlimited per transaction
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<div class="title" data-bs-toggle="collapse" data-bs-target="#faq-5">How do i participate in P2E Game?</div>
+								<div id="faq-5" class="collapse" data-bs-parent="#accordion-faq">
+									<div class="content">
+										We are building the game behind the scene, our demo will go live soon while the BETA gameplay will be available in Q3-2023
+										<br />
+										<br />
+										To participate, you will be required to hold at least 1 Starknet Chimpion NFT to participate
+										<br />
+										<br />
+										Also, you’ll be able to lend your assets for players as a source of passive income!
 									</div>
 								</div>
 							</div>
@@ -261,26 +319,18 @@
 				<div class="row align-items-center">
 					<div class="col-md-6">
 						<h2 class="main-title" style="margin-bottom: 8px">OG MINT</h2>
+						<div id=""></div>
 						<div class="row">
 							<div class="col-md-8">
 								<div class="input-value">
 									<select id="buy-popup-og-amount">
-										<option value="1" selected>1 NFT</option>
-										<option value="2">2 NFTs</option>
-										<option value="3">3 NFTs</option>
-										<option value="4">4 NFTs</option>
-										<option value="5">5 NFTs</option>
-										<option value="6">6 NFTs</option>
-										<option value="7">7 NFTs</option>
-										<option value="8">8 NFTs</option>
-										<option value="9">9 NFTs</option>
-										<option value="10">10 NFTs</option>
+										<option value="1" selected>1 NFT (0.01 ETH)</option>
 									</select>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<a href="#" class="shape-btn" id="buy-popup-og-submit">
-									<span>Buy</span>
+									<span>Mint</span>
 								</a>
 							</div>
 						</div>
@@ -290,22 +340,17 @@
 							<div class="col-md-8">
 								<div class="input-value">
 									<select id="buy-popup-whitelist-amount">
-										<option value="1" selected>1 NFT</option>
-										<option value="2">2 NFTs</option>
-										<option value="3">3 NFTs</option>
-										<option value="4">4 NFTs</option>
-										<option value="5">5 NFTs</option>
-										<option value="6">6 NFTs</option>
-										<option value="7">7 NFTs</option>
-										<option value="8">8 NFTs</option>
-										<option value="9">9 NFTs</option>
-										<option value="10">10 NFTs</option>
+										<option value="1" selected>1 NFT (0.02 ETH)</option>
+										<option value="2">2 NFTs (0.04 ETH)</option>
+										<option value="3">3 NFTs (0.06 ETH)</option>
+										<option value="4">4 NFTs (0.08 ETH)</option>
+										<option value="5">5 NFTs (0.1 ETH)</option>
 									</select>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<a href="#" class="shape-btn" id="buy-popup-whitelist-submit">
-									<span>Buy</span>
+									<span>Mint</span>
 								</a>
 							</div>
 						</div>
@@ -315,22 +360,22 @@
 							<div class="col-md-8">
 								<div class="input-value">
 									<select id="buy-popup-publish-amount">
-										<option value="1" selected>1 NFT</option>
-										<option value="2">2 NFTs</option>
-										<option value="3">3 NFTs</option>
-										<option value="4">4 NFTs</option>
-										<option value="5">5 NFTs</option>
-										<option value="6">6 NFTs</option>
-										<option value="7">7 NFTs</option>
-										<option value="8">8 NFTs</option>
-										<option value="9">9 NFTs</option>
-										<option value="10">10 NFTs</option>
+										<option value="1" selected>1 NFT (0.02 ETH)</option>
+										<option value="2">2 NFTs (0.04 ETH)</option>
+										<option value="3">3 NFTs (0.06 ETH)</option>
+										<option value="4">4 NFTs (0.08 ETH)</option>
+										<option value="5">5 NFTs (0.1 ETH)</option>
+										<option value="6">6 NFTs (0.12 ETH)</option>
+										<option value="7">7 NFTs (0.14 ETH)</option>
+										<option value="8">8 NFTs (0.16 ETH)</option>
+										<option value="9">9 NFTs (0.18 ETH)</option>
+										<option value="10">10 NFTs (0.2 ETH)</option>
 									</select>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<a href="#" class="shape-btn" id="buy-popup-publish-submit">
-									<span>Buy</span>
+									<span>Mint</span>
 								</a>
 							</div>
 						</div>

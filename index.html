@@ -44,7 +44,7 @@
 				<img class="main-img" src="./images/banner.gif" alt="" data-aos="zoom-in" />
 				<div class="banner-title">STARKNET NFTs</div>
 				<div class="text-center" data-aos="fade-up" data-aos-offset="100" data-aos-delay="100">
-					<a href="#buy-now" class="shape-btn open-popup">
+					<a href="#buy-now" class="shape-btn" id="buy-now">
 						<span>BUY NOW</span>
 					</a>
 				</div>
@@ -108,7 +108,7 @@
 				<h2 class="main-title" data-aos="fade-left" data-aos-offset="100">JOURNEY TO CHIMPION - ROADMAP</h2>
 				<br />
 				<br />
-				<a href="./images/roadmap-2-big.jpg" data-fancybox>
+				<a href="./images/roadmap-2.jpg" data-fancybox>
 					<img class="w-100" src="./images/roadmap-2.jpg" />
 				</a>
 			</div>
@@ -254,25 +254,93 @@
 				</div>
 			</div>
 		</footer>
-		<!-- <div class="popup">
-            <div class="overlay"></div>
-            <div class="box">
-                <div class="popup-close close-popup"></div>
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <h2 class="main-title">CHIMP HOUSE</h2>
-                        <div>Welcome to the Chimpverse - we're creating houses & buildings where our chimps hangout, play games & chill with each other...</div>
-                        <a href="/chimphouse" class="shape-btn mt-lg-5 mt-md-4 mt-sm-3 mt-2">
-                            <span>SEE MORE</span>
-                        </a>
-                        <br />
-                    </div>
-                    <div class="col-md-6">
-                        <img src="./images/chimp-house.jpg" class="w-100" />
-                    </div>
-                </div>
-            </div>
-        </div> -->
+		<div class="popup" id="buy-popup">
+			<div class="overlay"></div>
+			<div class="box">
+				<div class="popup-close close-popup"></div>
+				<div class="row align-items-center">
+					<div class="col-md-6">
+						<h2 class="main-title" style="margin-bottom: 8px">OG MINT</h2>
+						<div class="row">
+							<div class="col-md-8">
+								<div class="input-value">
+									<select id="buy-popup-og-amount">
+										<option value="1" selected>1 NFT</option>
+										<option value="2">2 NFTs</option>
+										<option value="3">3 NFTs</option>
+										<option value="4">4 NFTs</option>
+										<option value="5">5 NFTs</option>
+										<option value="6">6 NFTs</option>
+										<option value="7">7 NFTs</option>
+										<option value="8">8 NFTs</option>
+										<option value="9">9 NFTs</option>
+										<option value="10">10 NFTs</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<a href="#" class="shape-btn" id="buy-popup-og-submit">
+									<span>Buy</span>
+								</a>
+							</div>
+						</div>
+						<br />
+						<h2 class="main-title" style="margin-bottom: 8px">WHITELIST MINT</h2>
+						<div class="row">
+							<div class="col-md-8">
+								<div class="input-value">
+									<select id="buy-popup-whitelist-amount">
+										<option value="1" selected>1 NFT</option>
+										<option value="2">2 NFTs</option>
+										<option value="3">3 NFTs</option>
+										<option value="4">4 NFTs</option>
+										<option value="5">5 NFTs</option>
+										<option value="6">6 NFTs</option>
+										<option value="7">7 NFTs</option>
+										<option value="8">8 NFTs</option>
+										<option value="9">9 NFTs</option>
+										<option value="10">10 NFTs</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<a href="#" class="shape-btn" id="buy-popup-whitelist-submit">
+									<span>Buy</span>
+								</a>
+							</div>
+						</div>
+						<br />
+						<h2 class="main-title" style="margin-bottom: 8px">PUBLISH MINT</h2>
+						<div class="row">
+							<div class="col-md-8">
+								<div class="input-value">
+									<select id="buy-popup-publish-amount">
+										<option value="1" selected>1 NFT</option>
+										<option value="2">2 NFTs</option>
+										<option value="3">3 NFTs</option>
+										<option value="4">4 NFTs</option>
+										<option value="5">5 NFTs</option>
+										<option value="6">6 NFTs</option>
+										<option value="7">7 NFTs</option>
+										<option value="8">8 NFTs</option>
+										<option value="9">9 NFTs</option>
+										<option value="10">10 NFTs</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<a href="#" class="shape-btn" id="buy-popup-publish-submit">
+									<span>Buy</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<img src="./images/img-01.jpg" class="w-100" />
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="d-none">
 			<img src="./images/left-btn-active.svg" />
 			<img src="./images/right-btn-active.svg" />
@@ -281,11 +349,7 @@
 		<script src="./js/bootstrap.min.js"></script>
 		<script src="./js/swiper-bundle.min.js"></script>
 		<script src="./js/jquery.fancybox.min.js"></script>
-		<script>
-			jQuery(document).ready(function ($) {
-				$(".popup").addClass("open");
-			});
-		</script>
+		<!-- <script src="./node/dist/main.js"></script> -->
 		<script src="./js/script.js"></script>
 	</body>
 </html>

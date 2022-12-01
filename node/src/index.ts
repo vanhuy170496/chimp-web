@@ -1,5 +1,5 @@
 import {getStarknet, connect, IStarknetWindowObject} from "get-starknet-wallet";
-import {uint256} from "starknet";
+import {uint256, Account} from "starknet";
 
 const NFT_CONTRACT_ADDRESS = "0x028cfe0c6b27abcad8957262cdf0ea92ca1261f10682968af1a82a8b5fb73a3d";
 const EHT_CONTRACT_ADDRESS = "0x049d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7";

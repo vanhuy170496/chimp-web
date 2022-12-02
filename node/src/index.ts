@@ -1,18 +1,10 @@
-import {getStarknet, connect, IStarknetWindowObject} from "get-starknet-wallet";
-import {uint256, Account} from "starknet";
+import {getStarknet, IStarknetWindowObject} from "get-starknet-wallet";
+import {uint256} from "starknet";
 
-const NFT_CONTRACT_ADDRESS = "0x028cfe0c6b27abcad8957262cdf0ea92ca1261f10682968af1a82a8b5fb73a3d";
-const EHT_CONTRACT_ADDRESS = "0x049d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7";
-
-const CONNECTED_KEY = "CONNECTED_KEY";
+import {connectWallet as _connectWallet, EHT_CONTRACT_ADDRESS, NFT_CONTRACT_ADDRESS, CONNECTED_KEY} from "./config";
 
 const connectWallet = async (showList = true, showModal = true): Promise<IStarknetWindowObject> => {
-	let starknet = getStarknet();
-	if (!starknet?.isConnected) {
-		starknet = await connect({showList});
-		if (!starknet) return;
-		await starknet.enable({showModal});
-	}
+	const starknet = await _connectWallet(showList, showModal);
 
 	if (starknet.isConnected) {
 		localStorage.setItem(CONNECTED_KEY, "1");
@@ -35,7 +27,7 @@ try {
 	}
 } catch (error) {}
 
-document.getElementById("connect").addEventListener("click", async (event) => {
+document.getElementById("connect")?.addEventListener("click", async (event) => {
 	event.preventDefault();
 	let starknet = getStarknet();
 	if (!starknet.isConnected) {
@@ -49,7 +41,7 @@ document.getElementById("connect").addEventListener("click", async (event) => {
 	return false;
 });
 
-document.getElementById("buy-now").addEventListener("click", async (event) => {
+document.getElementById("buy-now")?.addEventListener("click", async (event) => {
 	event.preventDefault();
 	const starknet = await connectWallet();
 	if (!starknet?.isConnected) return false;
@@ -58,7 +50,7 @@ document.getElementById("buy-now").addEventListener("click", async (event) => {
 });
 
 const mint = (type: string, priceUnit: number, entrypoint: string) => {
-	document.getElementById(`buy-popup-${type}-submit`).addEventListener("click", async (event) => {
+	document.getElementById(`buy-popup-${type}-submit`)?.addEventListener("click", async (event) => {
 		event.preventDefault();
 		const starknet = await connectWallet();
 		if (!starknet) return false;

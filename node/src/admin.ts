@@ -1,5 +1,5 @@
 import {compileCalldata} from "starknet/dist/utils/stark";
-import {connectWallet, NFT_CONTRACT_ADDRESS, EHT_CONTRACT_ADDRESS} from "./config";
+import {connectWallet, NFT_CONTRACT_ADDRESS, EHT_CONTRACT_ADDRESS} from "./helper";
 
 // Admin - OG MINT
 document.getElementById("open-og-mint")?.addEventListener("click", async () => {

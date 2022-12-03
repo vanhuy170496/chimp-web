@@ -1,7 +1,6 @@
 import {getStarknet, IStarknetWindowObject} from "get-starknet-wallet";
 import {uint256} from "starknet";
-
-import {connectWallet as _connectWallet, EHT_CONTRACT_ADDRESS, NFT_CONTRACT_ADDRESS, CONNECTED_KEY} from "./config";
+import {connectWallet as _connectWallet, EHT_CONTRACT_ADDRESS, NFT_CONTRACT_ADDRESS, CONNECTED_KEY, toast} from "./helper";
 
 const connectWallet = async (showList = true, showModal = true): Promise<IStarknetWindowObject> => {
 	const starknet = await _connectWallet(showList, showModal);
@@ -72,7 +71,7 @@ const mint = (type: string, priceUnit: number, entrypoint: string) => {
 			}),
 		]);
 
-		alert("Transaction sending....");
+		alert("Request success.");
 		return false;
 	});
 };

@@ -62,14 +62,14 @@ document.getElementById("set-whitelist-wallet")?.addEventListener("click", async
 		}))
 	);
 });
-// Admin Publish mint
-document.getElementById("open-publish-mint")?.addEventListener("click", async () => {
+// Admin Public mint
+document.getElementById("open-public-mint")?.addEventListener("click", async () => {
 	const starknet = await connectWallet();
 
 	await starknet.account.execute([
 		{
 			contractAddress: NFT_CONTRACT_ADDRESS,
-			entrypoint: "setOpenPublishMint",
+			entrypoint: "setOpenPublicMint",
 			calldata: ["1", "0"],
 		},
 	]);

@@ -1,7 +1,7 @@
 import {connect, getStarknet, IStarknetWindowObject} from "get-starknet-wallet";
 import "jquery-toast-plugin";
 
-export const NFT_CONTRACT_ADDRESS = "0x03c0e27983f453c2925ad6fd0d88f128ed9a627843e351ebab13fe880c3a3ec1";
+export const NFT_CONTRACT_ADDRESS = "0x00322c0423c89b3e4cf9ffc245f7559e3492bd758e53e2fa2c4e3e82f09ecb4f";
 export const EHT_CONTRACT_ADDRESS = "0x049d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7";
 export const CONNECTED_KEY = "CONNECTED_KEY";
 

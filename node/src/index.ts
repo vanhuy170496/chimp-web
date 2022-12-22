@@ -77,5 +77,5 @@ const mint = (type: string, priceUnit: number, entrypoint: string) => {
 };
 
 mint("og", 1, "mintOG");
-mint("whitelist", 2, "mintWhitelist");
+mint("whitelist", 1.5, "mintWhitelist");
 mint("public", 2, "mint");

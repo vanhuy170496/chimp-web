@@ -83,10 +83,6 @@ document.getElementById("connect")?.addEventListener("click", async (event) => {
 
 document.getElementById("buy-now")?.addEventListener("click", async (event) => {
 	event.preventDefault();
-	if (new Date().getTime() <= 1674396000000 && !location.host.startsWith("localhost")) {
-		alert("Waiting until 2022-12-22 14:00 UTC");
-		return;
-	}
 	const starknet = await connectWallet();
 	if (!starknet?.isConnected) return false;
 	document.getElementById("buy-popup").classList.add("open");

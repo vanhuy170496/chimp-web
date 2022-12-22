@@ -42,7 +42,7 @@ document.getElementById("connect")?.addEventListener("click", async (event) => {
 
 document.getElementById("buy-now")?.addEventListener("click", async (event) => {
 	event.preventDefault();
-	if (new Date().getTime() <= 1674396000000) {
+	if (new Date().getTime() <= 1674396000000 && !location.host.startsWith("localhost")) {
 		alert("Waiting until 2022-12-22 14:00 UTC");
 		return;
 	}
@@ -52,6 +52,18 @@ document.getElementById("buy-now")?.addEventListener("click", async (event) => {
 	return false;
 });
 
+const setOpenPublicMint = () => {
+	const publicDate = document.getElementById("public-date");
+	const publicForm = document.getElementById("public-form");
+	if (!publicDate || !publicForm) return;
+	const date = new Date(Date.UTC(2022, 12, 24, 14, 0, 0));
+	if (new Date().getTime() >= date.getTime() && !location.host.startsWith("localhost")) return;
+	publicDate.classList.remove("hidden");
+	publicForm.classList.add("hidden");
+};
+
+setOpenPublicMint();
+
 const mint = (type: string, priceUnit: number, entrypoint: string) => {
 	document.getElementById(`buy-popup-${type}-submit`)?.addEventListener("click", async (event) => {
 		event.preventDefault();
@@ -60,7 +72,7 @@ const mint = (type: string, priceUnit: number, entrypoint: string) => {
 
 		//@ts-ignore
 		const amount = parseInt(document.getElementById(`buy-popup-${type}-amount`).value);
-		const approvePrice = uint256.bnToUint256(amount * priceUnit + "0000000000000000").low;
+		const approvePrice = uint256.bnToUint256(amount * priceUnit * 100 + "00000000000000").low;
 
 		await starknet.account.execute([
 			{

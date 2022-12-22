@@ -782,3 +782,12 @@ ul {
 .shape-btn.connected:hover .disconnect-value {
 	display: flex;
 }
+
+.disabled {
+	pointer-events: none;
+	opacity: 0.3;
+}
+
+.hidden {
+	display: none;
+}

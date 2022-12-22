@@ -1,6 +1,5 @@
 import {compileCalldata} from "starknet/dist/utils/stark";
 import {connectWallet, NFT_CONTRACT_ADDRESS, EHT_CONTRACT_ADDRESS} from "./helper";
-import {uint256} from "starknet";
 import {IStarknetWindowObject} from "get-starknet-wallet";
 
 // Admin - OG MINT

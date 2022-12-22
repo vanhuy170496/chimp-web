@@ -1,5 +1,7 @@
 import {compileCalldata} from "starknet/dist/utils/stark";
 import {connectWallet, NFT_CONTRACT_ADDRESS, EHT_CONTRACT_ADDRESS} from "./helper";
+import {uint256} from "starknet";
+import {IStarknetWindowObject} from "get-starknet-wallet";
 
 // Admin - OG MINT
 document.getElementById("open-og-mint")?.addEventListener("click", async () => {
@@ -98,3 +100,35 @@ document.getElementById("withdraws")?.addEventListener("click", async () => {
 		},
 	]);
 });
+
+// Get balances
+document.getElementById("get-balance")?.addEventListener("click", async () => {
+	const starknet = await connectWallet();
+
+	// @ts-ignore
+	const wallets = ((document.getElementById("get-balances-values")?.value as string) || "")
+		.split("\n")
+		.map((wallet) => wallet.trim())
+		.filter((wallet) => !!wallet);
+
+	const infos = await Promise.all(wallets.map((wallet) => getWalletBalance(starknet, wallet)));
+	const valueElement = document.getElementById("balances-values");
+	if (!valueElement) return;
+	valueElement.outerHTML = infos.map((info) => `${info.account} ---- ${info.balance}`).join("<br />");
+});
+
+const getWalletBalance = async (starknet: IStarknetWindowObject, account: string) => {
+	try {
+		const {result} = await starknet.account.callContract({
+			contractAddress: EHT_CONTRACT_ADDRESS,
+			entrypoint: "balanceOf",
+			calldata: compileCalldata({account}),
+		});
+		let [_balance] = compileCalldata({ok: result[0]});
+		_balance = _balance.slice(0, Math.max(_balance.length - 14, 0));
+		const balance = parseInt(_balance || "0") / 10000;
+		return {account, balance};
+	} catch (error) {
+		return {account, balance: -1};
+	}
+};

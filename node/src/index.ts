@@ -1,6 +1,7 @@
 import {getStarknet, IStarknetWindowObject} from "get-starknet-wallet";
 import {uint256} from "starknet";
-import {connectWallet as _connectWallet, EHT_CONTRACT_ADDRESS, NFT_CONTRACT_ADDRESS, CONNECTED_KEY} from "./helper";
+import {compileCalldata} from "starknet/dist/utils/stark";
+import {connectWallet as _connectWallet, EHT_CONTRACT_ADDRESS, NFT_CONTRACT_ADDRESS, CONNECTED_KEY, WHITELISTS} from "./helper";
 
 const connectWallet = async (showList = true, showModal = true): Promise<IStarknetWindowObject> => {
 	const starknet = await _connectWallet(showList, showModal);
@@ -17,7 +18,46 @@ const connectWallet = async (showList = true, showModal = true): Promise<IStarkn
 		document.getElementById("connect-value").innerHTML = "CONNECT";
 	}
 
+	await checkWalletOGMint(starknet);
+
 	return starknet;
+};
+
+const checkWalletOGMint = async (starknet: IStarknetWindowObject) => {
+	const address = starknet.account.address;
+	const ogMintAlertElement = document.getElementById("og-mint-alert");
+	const ogMintFormElement = document.getElementById("og-mint-form");
+	if (!ogMintAlertElement || !ogMintFormElement) {
+		ogMintAlertElement.classList.remove("hidden");
+		ogMintFormElement.classList.add("hidden");
+		return;
+	}
+	if (localStorage.getItem(`minted_${starknet.account.address}`) == "1") {
+		ogMintAlertElement.classList.remove("hidden");
+		ogMintFormElement.classList.add("hidden");
+		return;
+	}
+	if (WHITELISTS.indexOf(uint256.bnToUint256(address).low) < 0) {
+		ogMintAlertElement.classList.remove("hidden");
+		ogMintFormElement.classList.add("hidden");
+		return;
+	}
+
+	const {result} = await starknet.account.callContract({
+		contractAddress: NFT_CONTRACT_ADDRESS,
+		entrypoint: "balanceOf",
+		calldata: compileCalldata({owner: address}),
+	});
+
+	const amount = parseInt(compileCalldata({ok: result[0]})[0]);
+	if (amount >= 1) {
+		ogMintAlertElement.classList.remove("hidden");
+		ogMintFormElement.classList.add("hidden");
+		return;
+	}
+
+	ogMintAlertElement.classList.add("hidden");
+	ogMintFormElement.classList.remove("hidden");
 };
 
 try {
@@ -37,6 +77,7 @@ document.getElementById("connect")?.addEventListener("click", async (event) => {
 		document.getElementById("connect-value").innerHTML = "CONNECT";
 		starknet.isConnected = false;
 	}
+	if (starknet.isConnected) await checkWalletOGMint(starknet);
 	return false;
 });
 
@@ -87,7 +128,12 @@ const mint = (type: string, priceUnit: number, entrypoint: string) => {
 			}),
 		]);
 
-		alert("Request success.");
+		document.getElementById("buy-popup").classList.remove("open");
+		connectWallet(false, false);
+		if (type === "og") {
+			localStorage.setItem(`minted_${starknet.account.address}`, "1");
+		}
+		alert("Successfully Minted. Congratulations.");
 		return false;
 	});
 };

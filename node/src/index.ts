@@ -94,7 +94,7 @@ const setOpenPublicMint = () => {
 	const publicForm = document.getElementById("public-form");
 	const whitelistMintGroup = document.getElementById("whitelist-mint-group");
 	if (!publicDate || !publicForm || !whitelistMintGroup) return;
-	const date = new Date(Date.UTC(2022, 11, 24, 13, 0, 0));
+	const date = new Date(Date.UTC(2022, 11, 24, 14, 0, 0));
 	if (new Date().getTime() < date.getTime()) {
 		whitelistMintGroup.classList.remove("hidden");
 		publicDate.classList.remove("hidden");

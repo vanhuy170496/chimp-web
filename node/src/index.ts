@@ -92,11 +92,18 @@ document.getElementById("buy-now")?.addEventListener("click", async (event) => {
 const setOpenPublicMint = () => {
 	const publicDate = document.getElementById("public-date");
 	const publicForm = document.getElementById("public-form");
-	if (!publicDate || !publicForm) return;
-	const date = new Date(Date.UTC(2022, 12, 24, 14, 0, 0));
-	if (new Date().getTime() >= date.getTime() && !location.host.startsWith("localhost")) return;
-	publicDate.classList.remove("hidden");
-	publicForm.classList.add("hidden");
+	const whitelistMintGroup = document.getElementById("whitelist-mint-group");
+	if (!publicDate || !publicForm || !whitelistMintGroup) return;
+	const date = new Date(Date.UTC(2022, 11, 24, 13, 0, 0));
+	if (new Date().getTime() < date.getTime()) {
+		whitelistMintGroup.classList.remove("hidden");
+		publicDate.classList.remove("hidden");
+		publicForm.classList.add("hidden");
+	} else {
+		whitelistMintGroup.classList.add("hidden");
+		publicDate.classList.add("hidden");
+		publicForm.classList.remove("hidden");
+	}
 };
 
 setOpenPublicMint();

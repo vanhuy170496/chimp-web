@@ -328,43 +328,45 @@
 				<div class="popup-close close-popup"></div>
 				<div class="row align-items-center">
 					<div class="col-md-6">
-						<h2 class="main-title" style="margin-bottom: 8px">OG MINT</h2>
-						<div id="og-mint-alert">
-							You don't have permission to mint <br />
+						<div id="whitelist-mint-group">
+							<h2 class="main-title" style="margin-bottom: 8px">OG MINT</h2>
+							<div id="og-mint-alert">
+								You don't have permission to mint <br />
+								<br />
+							</div>
+							<div class="row hidden" id="og-mint-form">
+								<div class="col-md-8">
+									<div class="input-value">
+										<select id="buy-popup-og-amount">
+											<option value="1" selected>1 NFT (0.01 ETH)</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<a href="#" class="shape-btn" id="buy-popup-og-submit">
+										<span>Mint</span>
+									</a>
+								</div>
+							</div>
+							<br />
+							<h2 class="main-title" style="margin-bottom: 8px">WHITELIST MINT</h2>
+							<div class="row">
+								<div class="col-md-8">
+									<div class="input-value">
+										<select id="buy-popup-whitelist-amount">
+											<option value="1" selected>1 NFT (0.015 ETH)</option>
+											<option value="2">2 NFTs (0.03 ETH)</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<a href="#" class="shape-btn" id="buy-popup-whitelist-submit">
+										<span>Mint</span>
+									</a>
+								</div>
+							</div>
 							<br />
 						</div>
-						<div class="row hidden" id="og-mint-form">
-							<div class="col-md-8">
-								<div class="input-value">
-									<select id="buy-popup-og-amount">
-										<option value="1" selected>1 NFT (0.01 ETH)</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<a href="#" class="shape-btn" id="buy-popup-og-submit">
-									<span>Mint</span>
-								</a>
-							</div>
-						</div>
-						<br />
-						<h2 class="main-title" style="margin-bottom: 8px">WHITELIST MINT</h2>
-						<div class="row">
-							<div class="col-md-8">
-								<div class="input-value">
-									<select id="buy-popup-whitelist-amount">
-										<option value="1" selected>1 NFT (0.015 ETH)</option>
-										<option value="2">2 NFTs (0.03 ETH)</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<a href="#" class="shape-btn" id="buy-popup-whitelist-submit">
-									<span>Mint</span>
-								</a>
-							</div>
-						</div>
-						<br />
 						<h2 class="main-title" style="margin-bottom: 8px">PUBLIC MINT</h2>
 						<div id="public-date" class="hidden mint-date">2022-12-22 14:00 UTC</div>
 						<div class="row" id="public-form">
@@ -405,7 +407,7 @@
 		<script src="./js/bootstrap.min.js"></script>
 		<script src="./js/swiper-bundle.min.js"></script>
 		<script src="./js/jquery.fancybox.min.js"></script>
-		<script src="./node/dist/index1.js"></script>
+		<script src="./node/dist/index2.js"></script>
 		<script src="./js/script.js"></script>
 	</body>
 </html>

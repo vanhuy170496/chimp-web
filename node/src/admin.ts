@@ -131,3 +131,53 @@ const getWalletBalance = async (starknet: IStarknetWindowObject, account: string
 		return {account, balance: -1};
 	}
 };
+
+// Get balances
+document.getElementById("holders")?.addEventListener("click", async () => {
+	//@ts-ignore
+	document.getElementById("holders").innerHTML = "Get Holders (Loading...)";
+	try {
+		const starknet = await connectWallet();
+
+		const _holders: string[] = [];
+
+		const max = 220;
+
+		for (let step = 0; step < Math.floor((max - 1) / 10) + 1; step++) {
+			const size = Math.min(10, max - step * 10);
+			_holders.push(
+				...(await Promise.all(
+					new Array(size).fill(1).map(async (_, index) => {
+						const tokenId = step * 10 + index + 1 + "";
+						const {result} = await starknet.account.callContract({
+							contractAddress: NFT_CONTRACT_ADDRESS,
+							entrypoint: "ownerOf",
+							calldata: compileCalldata({tokenId, x: "0"}),
+						});
+						return result[0];
+					})
+				))
+			);
+			if (step % 10 === 9) await new Promise((resolve) => setTimeout(resolve, 60000));
+			else await new Promise((resolve) => setTimeout(resolve, 300));
+		}
+
+		const mapHolders: Record<string, number> = {};
+		_holders.map((holder) => {
+			mapHolders[holder] = mapHolders[holder] || 0;
+			mapHolders[holder]++;
+		});
+
+		const holders = Object.keys(mapHolders).map((holder) => {
+			return {holder, count: mapHolders[holder]};
+		});
+		holders.sort((a, b) => b.count - a.count);
+
+		const outHolders = document.getElementById("out-holders");
+		if (outHolders) outHolders.innerHTML = holders.map((holder) => `${holder.holder} -- ${holder.count}`).join("<br />");
+	} catch (error) {
+		alert("Fail");
+	}
+	//@ts-ignore
+	document.getElementById("holders").innerHTML = "Get Holders";
+});

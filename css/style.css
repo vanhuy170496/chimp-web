@@ -201,15 +201,19 @@ section {
 	background-size: 100% 100%;
 	margin-left: -1px;
 }
+.shape-btn.dark span,
 .shape-btn:hover span {
 	color: #02fff0;
 }
+.shape-btn.dark span,
 .shape-btn:hover span {
 	background: #000;
 }
+.shape-btn.dark::before,
 .shape-btn:hover:before {
 	background-image: url(../images/left-btn-active.svg);
 }
+.shape-btn.dark::after,
 .shape-btn:hover:after {
 	background-image: url(../images/right-btn-active.svg);
 }
